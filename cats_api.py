@@ -81,9 +81,9 @@ def frequencies(api):
 
   return chart
 
-#seperated = lifespanseperator(data)
-#seperated = weightseperation(data)
-#averages = average(seperated)
-#metriccalculations(averages)
-#lifespancalculations(averages)
-#frequencies(data)
+seperated = lifespanseperator(data)
+seperated = weightseperation(data)
+averages = average(seperated)
+metriccalculations(averages)
+lifespancalculations(averages)
+frequencies(data)
