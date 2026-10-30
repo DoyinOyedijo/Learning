@@ -42,7 +42,7 @@ class Statistics():
 
 #Mean object that determines the mean of the list
   def mean(self):
-    return round(self.sum() / self.count())
+    return self.sum() / self.count()
 
 #Median object that determines the mean of the list
   def median(self):
@@ -73,27 +73,27 @@ class Statistics():
 
 #Standard deviation object that determines the standard deviation of the list
   def std(self):
-    subtractval = [round(num - self.mean()) for num in self.lst]
-    squareddifference = [round(val**2) for val in subtractval]
+    subtractval = [num - self.mean() for num in self.lst]
+    squareddifference = [val**2 for val in subtractval]
     
     sum = 0
     
     for num in squareddifference:
       sum += num
     
-    average =  round(sum / (self.count() - 1))
-    return round(math.sqrt(average),1)
+    average =  sum / (self.count() - 1)
+    return math.sqrt(average)
 
  #Variance object that determines the variance of the list   
   def var(self):
-    subtractval = [round(num - self.mean()) for num in self.lst]
-    squareddifference = [round(val**2) for val in subtractval]
+    subtractval = [num - self.mean() for num in self.lst]
+    squareddifference = [val**2 for val in subtractval]
     
     sum = 0
     for num in squareddifference:
       sum += num
     
-    return round(sum / (self.count() - 1))
+    return sum / (self.count() - 1)
   
   #Frequency Distribution object that determines the frequency of the object.
   def freq_dist(self):
