@@ -12,6 +12,7 @@ A from-scratch rebuild of Python's built-in `statistics` module, written as a cl
 **Run:** `python statistics_class.py`
 
 ### Cat Breeds API Analysis (`cats_api.py`)
+**WIP**
 Pulls live breed data from [The Cat API](https://thecatapi.com/) and analyzes it.
 - Fetches every breed with `requests` and parses the JSON response
 - Uses regular expressions to turn weight and lifespan ranges (e.g. "3 - 5") into averages
