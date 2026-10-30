@@ -80,10 +80,13 @@ def frequencies(api):
     chart[cats['origin']][cats['name']] += 1
 
   return chart
+  
+weights = weightseperation(data)
+weight_averages = average(weights)
+print('Weight (kg):', metriccalculations(weight_averages))
 
-seperated = lifespanseperator(data)
-seperated = weightseperation(data)
-averages = average(seperated)
-metriccalculations(averages)
-lifespancalculations(averages)
-frequencies(data)
+lifespans = lifespanseperator(data)
+lifespan_averages = average(lifespans)
+print('Lifespan (years):', lifespancalculations(lifespan_averages))
+
+print(frequencies(data))
