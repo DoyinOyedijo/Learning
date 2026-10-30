@@ -1,6 +1,6 @@
 # Learning
 
-Mini projects I build while learning Python, from the 30 Days of Python roadmap and beyond.
+Mini projects I complete on my way to becoming a developer
 
 ## Projects
 
