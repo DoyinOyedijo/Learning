@@ -49,7 +49,7 @@ class Statistics():
     sortedlst = sorted(self.lst)
     length = int(self.count()/2)
     if self.count() % 2 == 0:
-      newmedian = int((sortedlst[length - 1] + sortedlst[length]) / 2)
+      newmedian = (sortedlst[length - 1] + sortedlst[length]) / 2
       return newmedian
     return sortedlst[length]
 
@@ -71,30 +71,21 @@ class Statistics():
 
     return {'mode': mode_val, 'count': largest}
 
-#Standard deviation object that determines the standard deviation of the list
-  def std(self):
-    subtractval = [num - self.mean() for num in self.lst]
-    squareddifference = [val**2 for val in subtractval]
-    
-    sum = 0
-    
-    for num in squareddifference:
-      sum += num
-    
-    average =  sum / (self.count() - 1)
-    return math.sqrt(average)
-
  #Variance object that determines the variance of the list   
   def var(self):
     avg = self.mean()
-    squareddifference = [(num - avg)**2 for num in self.list]
+    squareddifference = [(num - avg)**2 for num in self.lst]
     
     sum = 0
     for num in squareddifference:
       sum += num
     
     return sum / (self.count() - 1)
-  
+
+#Standard deviation object that determines the standard deviation of the list
+  def std(self):
+    return math.sqrt(self.var())
+    
   #Frequency Distribution object that determines the frequency of the object.
   def freq_dist(self):
     compiled = {}
@@ -117,9 +108,9 @@ print('Sum: ', data.sum()) # 744
 print('Min: ', data.min()) # 24
 print('Max: ', data.max()) # 38
 print('Range: ', data.range()) # 14
-print('Mean: ', data.mean()) # 30
+print('Mean: ', data.mean()) # 29.76
 print('Median: ', data.median()) # 29
 print('Mode: ', data.mode()) # {'mode': 26, 'count': 5}
-print('Standard Deviation: ', data.std()) # 4.2
-print('Variance: ', data.var()) # 17.5
+print('Standard Deviation: ', data.std()) # 4.27
+print('Variance: ', data.var()) # 18.27
 print('Frequency Distribution: ', data.freq_dist()) # [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
