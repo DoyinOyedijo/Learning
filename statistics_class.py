@@ -86,8 +86,8 @@ class Statistics():
 
  #Variance object that determines the variance of the list   
   def var(self):
-    subtractval = [num - self.mean() for num in self.lst]
-    squareddifference = [val**2 for val in subtractval]
+    avg = self.mean()
+    squareddifference = [(num - avg)**2 for num in self.list]
     
     sum = 0
     for num in squareddifference:
